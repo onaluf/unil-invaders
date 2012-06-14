@@ -1,0 +1,121 @@
+ <!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta property="og:title" content="UNIL Invader" />
+		<meta property="og:description" content="In this small game you are the last hope to save your beloved Rovex Learning Center© from invaders coming from the distant UNIL galaxy." />
+		<meta property="og:image" content="thumbnail.png" />
+		<title>UNIL Invaders</title>
+		<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+ 		<script type="text/javascript" src="http://cdn.gamequeryjs.com/jquery.gamequery.js"></script>
+		<script type="text/javascript" src="soundmanager2.js"></script>
+		<script type="text/javascript" src="jquery.gamequery.soundwrapper.soundmanager2.js"></script>
+		<script type="text/javascript" src="game.js"></script>
+		<style>
+			html, body {
+				background: #000;
+				width:  100%;
+			}
+			#centerer {
+				position: relative;
+				width: 512px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			#splash {
+				width: 512px;
+				height: 512px;
+				background-image: url('splash.png');
+			}
+			#start {
+				position: relative;
+				top: 300px;
+				left: 140px;
+			}
+			#fb-start {
+				position: relative;
+				top: 300px;
+				left: 40px;
+			}
+			#topScore {
+				position: relative;
+				top: 350px;
+				left: 0px;
+				font-family: sans-serif;
+				text-align: center;
+				font-size: 18px;
+				color: white;
+			}
+			#loadbar{
+				position: relative;
+				top: 350px;
+				left: 10px;
+				background: #FFF; 
+				height: 32px; 
+				width: 0;
+				overflow: hidden;
+			} 
+			#gameover {
+				width: 512px; 
+				height: 462px; 
+				background-image: url('gameover.png'); 
+				position: absolute; 
+				top: 0; 
+				left: 0; 
+				display: none;
+				
+				font-family: sans-serif;
+				text-align: center;
+				font-size: 18px;
+				color: white;
+				padding-top: 50px;
+			}
+			
+			#gameover a {
+				color: white;
+			}
+			.muteButton{
+                background: url('sound_mute.png');
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+            }
+            .unmuteButton{
+                background: url('sound.png');
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+            }
+		</style>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<div id="centerer">
+			<div id="playground">
+				<div id ="splash">
+					<a id="start" href="#"><img src="start.png" /></a>
+					<a id="fb-start" style="display: none;"href="#"><img src="fbstart.png" /></a>
+					<div id="topScore"></div>
+					<div id="loadbar"></div>
+				</div>
+			</div>
+			<div id="gameover"></div>
+			<div id="blabla" style="color: white; font-family:sans-serif; font-size:  12px ;width: 512px; position: absolute; top: 512px;">
+				<p><strong>How to play:</strong></p>
+				<p>Press 'a' and 'd' to move the canon, 'm' to shoot and 'b' to summon Aebischerzilla, the protector of the EPFL (you can do this only once!) .</p>
+				
+				<p><strong>Backstory:</strong></p>
+				<p>In this small game you are the last hope to save your beloved <strong>Rovex Learning Center©</strong> from invaders coming from the distant UNIL galaxy</p>
+				
+				<a name="privacy"></a>
+				<p><strong>Privacy Policy:</strong></p>
+				<p>We don't store nor share any of your private data. If you log into facebook your highscore will be saved into your profile.</p>
+				
+				<a name="tos"></a>
+				<p><strong>Terms of Service:</strong></p>
+				<p>This game is provided as is. We could not be held responsible for any lost of productivity or bad exam result resutling from its use.</p>
+			</div>
+		</div>
+	</body>
+</html>
